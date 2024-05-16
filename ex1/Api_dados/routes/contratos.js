@@ -19,7 +19,6 @@ router.get('/', function(req, res) {
     else {
         Contrato.listar()
         .then(dados => {
-            console.log(dados);
             res.jsonp(dados)})
         .catch(erro => res.status(500).jsonp(erro))
     }

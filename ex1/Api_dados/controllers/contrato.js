@@ -15,7 +15,7 @@ module.exports.findById = id => {
 
 module.exports.findByEntidade = entidade => {
     return Contrato
-        .find({entidade_comunicante: entidade})
+        .find({NIPC_entidade_comunicante: entidade})
         .sort({_id: 1})
         .exec()
 }

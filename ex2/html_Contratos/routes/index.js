@@ -27,7 +27,7 @@ router.get('/entidades/:nipc', function(req, res, next) {
         somatorio += contrato.precoContratual;
       });
 
-      res.render('entidade', { titulo: 'Entidade ' + req.params.entidade_comunicante + ' (' + req.params.nipc + ')', data: d, contratos: dados.data, somatorio: somatorio });
+      res.render('entidade', { titulo: 'Entidade ' + dados.data[0].entidade_comunicante + ' (' + req.params.nipc + ')', data: d, contratos: dados.data, somatorio: somatorio });
     })
     .catch(erro => {
       res.render('error', { error: erro });
